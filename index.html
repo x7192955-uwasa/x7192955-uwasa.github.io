@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>HTML Harjoitus</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+	</body>
+	</html>
+<h1>Peruselementit ja attribuutit</h1>
+<p>HTML tulee sanoista Hypertext Markup Language. Tämä tarjoittaa tarkoittaa lyhyesti merkintäkieltä hypertekstille. Hyperteksti on tekstiä joka liittyy toisiin teksteihin linkkien avulla.</p>
+<p id="guid1" class="esimerkki">Tässä harjoituksessa sulkeen sisällä on ilmoitettu elementti ja tarvittavat attribuutit ja niiden arvo on hakasulkeen sisällä.</p>
+<h2 id="guid2">Elementtityyppejä</h2>
+<p class = "esimerkki-box">HTML:ssä on erilaisia elementtejä eri tarkoitukseen. Elementit voidaan jakaa block ja inline -elementteihin. Lyhyesti ja karkeasti, inline elementit ohjaavat tekstisisältöä tms. ja block elementit jäsentävät sivua. Yleisesti ottaen block elementit voivat olla sivulla itsenäisesti – inline elementit ovat block lementtien sisällä. Näistä on poikkeuksia, esim. listat, kuvat, taulukot jne.</p>
+<h3>Inline elementtiesimerkkejä</h3>
+<p class="esimerkki">Inline elementtejä kuten <i>kursiivi</i>, <b>lihavointi</b>, <u>alleviivaus</u> voidaan käyttää tekstin muotoiluun tai niilla voidaan asettaa tekstin joukkoon toiminnallisuuksia kuten linkkielementti a ja <span class = "spanni">span -elementti</span>, jolla voidaan tuoda css- ja javascript -tiedostojen määrityksiä ja toiminnallisuuksia sivulle. Myös kuvaelementti img on inline elementti, vaikkakin se voi toimia myös block tyyppisenä elementtinä.</p>
+<h3>Block elementtejä</h3>
+<p>Block elementtejä käytetään sivuston jäsentämiseen ja taittoon. Yksinkertainen esimerkki tästä on kappale p elementti.</p>
+<p>Block elementtejä käytetään usein ns. container -elementteinä, tästä hyvä esimerkki on div ja section elementti.</p>
+<p>Joidenkin block elementien sisältö on ennalta määritelty, tällaisia esimerkiksi listat ja taulukot.</p>
+<button onclick="setClass()">Taulukot</button>
+<div id = "guid3" class = "hankalaa esimerkki jsharkkatyyli"
+	<h2>Taulukko</h2>
+	<p>Taulukko aloitetaan table elementillä, otsikko osio erotetaan thead -elementillä, sisältö erotetaan tbody elementillä. Rivi merkataan tr elementillä ja sen sisälle laitetaan solut td elementillä.</p>
+	<p >Tee alla olevista soluista taulukko ja laita taulukolle attribuutit id[taulukko1] ja luokka class[taulukko].</p>
+	<table id="taulukko1" class="taulukko">
+		<tr>
+			<td>
+				<p>Solu11</p>
+			</td>
+			<td>
+				<p>Solu12</p>
+			</td>
+			<td>
+				<p>Solu13</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Solu21</p>
+			</td>
+			<td>
+				<p>Solu22</p>
+			</td>
+			<td>
+				<p>Solu23</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Solu31</p>
+			</td>
+			<td>
+				<p>Solu32</p>
+			</td>
+			<td>
+				<p>Solu33</p>
+			</td>
+		</tr>
+	</table>
+	<h2>Listat</h2>
+	<p>Listat sisältävät lista tyyppi elementin, ol tai ul ja jokainen listan ns. entry merkitään li elementillä.</p>
+
+	<h3>Numeroitu lista</h3>
+	<ol>
+		<li>
+			<p>Lista</p>
+		</li>
+		<li>
+			<p>Lista</p>
+		</li>
+		<li>
+			<p>Lista</p>
+		</li>
+	</ol>
+
+	<h3>Numeroimaton lista</h3>
+	<ul>
+		<li>
+			<p>Lista</p>
+		</li>
+		<li>
+			<p>Lista</p>
+		</li>
+		<li>
+			<p>Lista</p>
+		</li>
+	</ul>
+</div>
+
+<h2>Kuva</h2>
+<p>Kuva voidaan laittaa sisältöön img elementillä, jonka attribuutteina on kuvan lähde (eli source -> src), kuvan vaihtoehtoinen näkymä tekstinluvulle tms. (eli alternative content -> alt). Myös kuvan koko voidaan antaa korkeus (height) ja leveys (width) attribuutteilla suhteellisena (%, vm) tai absoluuttisena (px, em). Kuva elementti on aina self closing eli sille ei tehdä sulkevaa elementtiä, vaan se suljetaan lisäämällä / elementin loppuun. (p) 
+</p>
+<p>Lisää kuva esimerkki.png tämän kappaleen alle.</p>
+<img src="esimerkki.png" alt="Tämä tässä on koala" />
+<h2>Linkki</h2>
+<p>Linkit ovat HTML sielu. Linkin kohde voi olla samalla sivulla, tällöin riittää viittaus kohteen id:seen, kohde voi olla toinen sivu samalla sivustolla, tällöin viittaus voidaan tehdä suhteellisena (eli polulla lähtösivulta kohde sivulle) tai absoluuttisena (eli sivun osoitteella).</p>
+<p>Linkki avataan a elementillä, jolle asetetaan kohde attribuutilla href. Linkin ulkoasua yms. Voi muuttaa antamalla sille luokan, jonka ulkoasu määritetään css:ssä.</p> 
+<p>Tee linkki sivuston elementtiin jolla on id guid1 tämän kappaleen <a href="#guid1">esimerkki1</a> sanaan. Tee lisäksi tästä linkki <a href="https://uwasa.fi" target="_blank">yliopiston kotivulle</a>.</p>
+<h1>Lisätehtäviä</h1>
+<p>1. Lisää sivulle div elementtejä ja laita niille omat id:t ja muutamia luokka.</p>	
+<p>2. Lisää sivulle semanttisia elementtejä, ks. W3school semantic elements.</p>	 
+
+<script>
+	function setClass() {
+		var element = document.getElementById("guid3");
+		element.classList.toggle("jsharkkatyyli");
+	}
+</script>
